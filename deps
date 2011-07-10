@@ -92,13 +92,13 @@
     target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
 
 [DaemonBundle]
-    git=https://github.com/CodeMeme/DaemonBundle.git
+    git=http://github.com/CodeMeme/DaemonBundle.git
     target=/bundles/CodeMeme/DaemonBundle
 
 [JobqueueBundle]
-    git=https://github.com/ninethousand/JobqueueBundle.git
+    git=http://github.com/ninethousand/JobqueueBundle.git
     target=/bundles/NineThousand/JobqueueBundle
 
 [ninethousand-jobqueue]
-    git=https://github.com/ninethousand/ninethousand-jobqueue.git
+    git=http://github.com/ninethousand/ninethousand-jobqueue.git
 

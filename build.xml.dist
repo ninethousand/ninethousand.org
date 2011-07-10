@@ -8,7 +8,7 @@
     <property name="deploy.password"   value="" />
     <property name="deploy.path"       value="" />
     <property name="deploy.repository" value="git@github.com:ninethousand/${phing.project.name}.git" />
-    <property name="deploy.servers"    value="jessegreathouse.us" />
+    <property name="deploy.servers"    value="" />
     <property name="deploy.history"    value="5" />
     <property name="test.bootstrap"    value="${project.basedir}/app/bootstrap.php.cache" />
     <property name="test.dir"          value="${project.basedir}/src" />

@@ -11,8 +11,7 @@
 
     <!-- postcache -->
     <target name="postcache"
-        depends="suppliment_config_direct,
-                 refresh_vendors_direct"
+        depends="refresh_vendors_direct"
         description="postcache deploy hook" />
 
     <!-- postdeploy targets -->
@@ -51,19 +50,6 @@
                 value="(
                 cd ${deploy.path}/${build.target}/cached-copy &amp;&amp; 
                 rm -rf vendor/ &amp;&amp; bin/vendors install  
-                )"
-                override="true" />
-            <foreach  list="${deploy.servers}" 
-                param="deploy.server" 
-                target="deploy.remotecmd" />
-    </target>
-    
-    <!-- suppliment config direct-->
-    <target name="suppliment_config_direct" >
-        <property name="command" 
-                value="(
-                cd ${deploy.path}/${build.target}/cached-copy/app/config &amp;&amp; 
-                cp database_dev.yml.dist database_dev.yml  
                 )"
                 override="true" />
             <foreach  list="${deploy.servers}" 
@@ -118,29 +104,6 @@
                      param="deploy.server" 
                      target="deploy.remotecmd" />
     </target>
-    
-    <!-- sync -->
-    <target name="sync_database" >
-        <property name="command" 
-            value="(
-            cd ${deploy.path}/current/app  &amp;&amp; 
-            ./console --no-ansi --force --em=admin --env=${symfony.env} edudirect:sync all 
-            )" 
-            override="true" />
-        <foreach list="${deploy.servers}" 
-            param="deploy.server" 
-            target="deploy.remotecmd" />
-    </target>
-    
-    <target name="sync" 
-        description="Syncs the database in production" 
-        depends="sync_database" />
-
-    <target name="sync.staging" 
-        description="Syncs the database in staging" 
-        depends="staging.properties,
-                 symfony.stage.properties,
-                 sync_database" />
     
     <!-- restart memcached -->
     <target name="restart_memcached"
