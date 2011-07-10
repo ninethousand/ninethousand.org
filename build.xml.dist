@@ -51,9 +51,9 @@
 
     <!-- Targets that assign properties -->
     <target name="staging.properties"      depends="deploy.currentbranch" >
-        <property name="deploy.user"       value="" />
-        <property name="deploy.password"   value="" />
-        <property name="deploy.path"       value="" />
+        <property name="deploy.user"       value="" override="true" />
+        <property name="deploy.password"   value="" override="true" />
+        <property name="deploy.path"       value="" override="true" />
         <property name="deploy.log"        value="2&gt;&amp;1 | tee -a ${deploy.path}/deploy.log" override="true" />
     </target>
 
