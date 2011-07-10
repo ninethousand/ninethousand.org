@@ -5,4 +5,3 @@ app/logs/*
 .build/
 vendor/
 build.xml
-src/Acme

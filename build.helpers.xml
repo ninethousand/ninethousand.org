@@ -63,7 +63,7 @@
             <property name="command" 
                 value="(
                 cd ${deploy.path}/current/app &amp;&amp; 
-                ./console --no-ansi --env=${symfony.env} --em=migrations doctrine:migrations:migrate  
+                ./console --no-ansi --env=${symfony.env} doctrine:migrations:migrate  
                 )"
                 override="true" />
             <foreach  list="${deploy.servers}" 
