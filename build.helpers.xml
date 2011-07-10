@@ -9,10 +9,6 @@
         <property name="symfony.env" value="stage" override="true" />
     </target>
 
-    <target name="symfony.test.properties" >
-        <property name="symfony.env" value="test" override="true" />
-    </target>
-
     <!-- postcache -->
     <target name="postcache"
         depends="suppliment_config_direct,
@@ -32,12 +28,6 @@
                      symfony.stage.properties,
                      post_deploy" 
             description="Execute post deployment utilities on staging" />
-
-    <target name="post_deploy.testing"
-        depends="testing.properties,
-                 symfony.test.properties,
-                 post_deploy" 
-        description="Execute post deployment utilities on staging" />
         
     <!-- refresh vendors distributed -->
     <target name="refresh_vendors_distributed"
@@ -150,12 +140,6 @@
         description="Syncs the database in staging" 
         depends="staging.properties,
                  symfony.stage.properties,
-                 sync_database" />
-
-    <target name="sync.testing" 
-        description="Syncs the database in testing" 
-        depends="testing.properties,
-                 symfony.test.properties,
                  sync_database" />
     
     <!-- restart memcached -->
