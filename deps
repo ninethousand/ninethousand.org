@@ -1,0 +1,104 @@
+[symfony]
+    git=http://github.com/symfony/symfony.git
+
+[twig]
+    git=http://github.com/fabpot/Twig.git
+    version=v1.1.0
+
+[monolog]
+    git=http://github.com/Seldaek/monolog.git
+    version=1.0.0
+    
+[doctrine-migrations]
+    git=http://github.com/doctrine/migrations.git
+
+[DoctrineMigrationsBundle]
+    git=http://github.com/symfony/DoctrineMigrationsBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineMigrationsBundle
+
+[doctrine-common]
+    git=http://github.com/doctrine/common.git
+    version=2.1.0
+
+[doctrine-dbal]
+    git=http://github.com/doctrine/dbal.git
+    version=2.1.0
+
+[doctrine]
+    git=http://github.com/doctrine/doctrine2.git
+    version=2.1.0
+
+[swiftmailer]
+    git=http://github.com/swiftmailer/swiftmailer.git
+    version=v4.1.0
+
+[assetic]
+    git=http://github.com/kriswallsmith/assetic.git
+
+[twig-extensions]
+    git=http://github.com/fabpot/Twig-extensions.git
+
+[metadata]
+    git=http://github.com/schmittjoh/metadata.git
+
+[SensioFrameworkExtraBundle]
+    git=http://github.com/sensio/SensioFrameworkExtraBundle.git
+    target=/bundles/Sensio/Bundle/FrameworkExtraBundle
+
+[JMSSecurityExtraBundle]
+    git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
+    target=/bundles/JMS/SecurityExtraBundle
+
+[SensioDistributionBundle]
+    git=http://github.com/sensio/SensioDistributionBundle.git
+    target=/bundles/Sensio/Bundle/DistributionBundle
+
+[SensioGeneratorBundle]
+    git=http://github.com/sensio/SensioGeneratorBundle.git
+    target=/bundles/Sensio/Bundle/GeneratorBundle
+
+[AsseticBundle]
+    git=http://github.com/symfony/AsseticBundle.git
+    target=/bundles/Symfony/Bundle/AsseticBundle
+
+[zend-http]
+    git=http://github.com/knplabs/zend-http.git
+    target=/zend/library/Zend/Http
+
+[zend-uri]
+    git=http://github.com/knplabs/zend-uri.git
+    target=/zend/library/Zend/Uri
+
+[CodeMemeForm]
+    git=http://github.com/CodeMeme/Form.git
+    target=/CodeMeme/Form
+
+[Phingistrano]
+    git=http://github.com/CodeMeme/Phingistrano.git
+
+[PhingistranoBundle]
+    git=http://github.com/CodeMeme/PhingistranoBundle.git
+    target=/bundles/CodeMeme/PhingistranoBundle
+
+[ConsoleAutocompleteBundle]
+    git=http://github.com/knplabs/KnpConsoleAutocompleteBundle.git
+    target=/bundles/Knp/Bundle/ConsoleAutocompleteBundle
+
+[doctrine-fixtures]
+    git=http://github.com/doctrine/data-fixtures.git
+
+[DoctrineFixturesBundle]
+    git=http://github.com/symfony/DoctrineFixturesBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
+
+[DaemonBundle]
+    git=https://github.com/CodeMeme/DaemonBundle.git
+    target=/bundles/CodeMeme/DaemonBundle
+
+[JobqueueBundle]
+    git=https://github.com/ninethousand/JobqueueBundle.git
+    target=/bundles/NineThousand/JobqueueBundle
+
+[ninethousand-jobqueue]
+    git=https://github.com/ninethousand/ninethousand-jobqueue.git
+

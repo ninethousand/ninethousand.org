@@ -1,0 +1,12 @@
+# Testing Database Configuration
+doctrine:
+    dbal:
+        default_connection: admin
+        connections:
+            admin:
+                driver:   %database_driver%
+                host:     %database_host%
+                dbname:   ninethousand_test
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8

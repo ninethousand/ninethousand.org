@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ninethousand.org" default="help">
+
+    <property name="phingistrano.dir"  value="${project.basedir}/vendor/Phingistrano/phingistrano" />
+    <property name="build.target"      value=".build" />
+    <property name="deploy.strategy"   value="direct" />
+    <property name="deploy.user"       value="" />
+    <property name="deploy.password"   value="" />
+    <property name="deploy.path"       value="" />
+    <property name="deploy.repository" value="git@github.com:ninethousand/${phing.project.name}.git" />
+    <property name="deploy.servers"    value="jessegreathouse.us" />
+    <property name="deploy.history"    value="5" />
+    <property name="test.bootstrap"    value="${project.basedir}/app/bootstrap.php.cache" />
+    <property name="test.dir"          value="${project.basedir}/src" />
+    <property name="version.to"        value="jesse@ninethousand.org" />
+    <property name="version.from"      value="robot@ninethousand.org" />
+    
+    <!-- Imports -->
+    <import file="${project.basedir}/build.helpers.xml" />
+    <import file="${phingistrano.dir}/build.xml" />
+
+    <!-- Main Targets -->
+
+    <target name="build"
+            depends="test"
+            description="Main Build Routine." />
+
+    <target name="release"
+            depends="version.tag, deploy.production, version.notify"
+            description="Executes a release to production." />
+
+    <target name="deploy.production"
+            depends="deploy.do, post_deploy"
+            description="Deploys master branch to production." />
+
+    <target name="rollback.production"
+            depends="rollback.do"
+            description="Rolls back a production release." />
+
+    <target name="deploy.staging"
+            depends="staging.properties, deploy.do, post_deploy.staging"
+            description="Deploys the current branch to staging." />
+
+    <target name="rollback.staging"
+            depends="staging.properties, rollback.do"
+            description="Rolls back the staging environment." />
+            
+    <target name="deploy.cleanup.staging"
+            depends="staging.properties, deploy.cleanup"
+            description="cleans deployment history in staging." />
+
+    <!-- Targets that assign properties -->
+    <target name="staging.properties"      depends="deploy.currentbranch" >
+        <property name="deploy.user"       value="" />
+        <property name="deploy.password"   value="" />
+        <property name="deploy.path"       value="" />
+        <property name="deploy.log"        value="2&gt;&amp;1 | tee -a ${deploy.path}/deploy.log" override="true" />
+    </target>
+
+</project>

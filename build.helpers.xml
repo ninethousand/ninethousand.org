@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="helpers" default="help">
+
+    <!-- Required properties -->
+    <property name="symfony.env" value="prod" />
+
+    <!-- Targets that assign properties -->
+    <target name="symfony.stage.properties" >
+        <property name="symfony.env" value="stage" override="true" />
+    </target>
+
+    <target name="symfony.test.properties" >
+        <property name="symfony.env" value="test" override="true" />
+    </target>
+
+    <!-- postcache -->
+    <target name="postcache"
+        depends="suppliment_config_direct,
+                 refresh_vendors_direct"
+        description="postcache deploy hook" />
+
+    <!-- postdeploy targets -->
+    <target name="post_deploy"
+            depends="migrate, 
+                     assetic_dump, 
+                     clear_cache,
+                     restart_memcached"
+            description="Execute post deployment utilities on production" />
+
+    <target name="post_deploy.staging"
+            depends="staging.properties,
+                     symfony.stage.properties,
+                     post_deploy" 
+            description="Execute post deployment utilities on staging" />
+
+    <target name="post_deploy.testing"
+        depends="testing.properties,
+                 symfony.test.properties,
+                 post_deploy" 
+        description="Execute post deployment utilities on staging" />
+        
+    <!-- refresh vendors distributed -->
+    <target name="refresh_vendors_distributed"
+        description="Refreshes the vendors" >
+        <exec dir="${project.basedir}/${build.target}/cached-copy"
+            passthru="true"
+            command="rm -rf vendor/ &amp;&amp; bin/vendors install" />
+    </target>
+    
+    <!-- suppliment config distributed-->
+    <target name="suppliment_config_distributed" >
+        <exec dir="${project.basedir}/${build.target}/cached-copy/app/config" 
+            passthru="true" 
+            command="cp database_dev.yml.dist database_dev.yml" />
+    </target>
+    
+    <!-- refresh vendors direct -->
+    <target name="refresh_vendors_direct"
+        description="Refreshes the vendors" >
+        <property name="command" 
+                value="(
+                cd ${deploy.path}/${build.target}/cached-copy &amp;&amp; 
+                rm -rf vendor/ &amp;&amp; bin/vendors install  
+                )"
+                override="true" />
+            <foreach  list="${deploy.servers}" 
+                param="deploy.server" 
+                target="deploy.remotecmd" />
+    </target>
+    
+    <!-- suppliment config direct-->
+    <target name="suppliment_config_direct" >
+        <property name="command" 
+                value="(
+                cd ${deploy.path}/${build.target}/cached-copy/app/config &amp;&amp; 
+                cp database_dev.yml.dist database_dev.yml  
+                )"
+                override="true" />
+            <foreach  list="${deploy.servers}" 
+                param="deploy.server" 
+                target="deploy.remotecmd" />
+    </target>
+
+    <!-- doctrine:migrations:migrate -->
+    <target name="migrate"
+            description="Run migrations on production servers" >
+            <property name="command" 
+                value="(
+                cd ${deploy.path}/current/app &amp;&amp; 
+                ./console --no-ansi --env=${symfony.env} --em=migrations doctrine:migrations:migrate  
+                )"
+                override="true" />
+            <foreach  list="${deploy.servers}" 
+                param="deploy.server" 
+                target="deploy.remotecmd" />
+    </target>
+
+    <!-- assets:install -->
+    <!-- assetic:dump -->
+    <target name="assetic_dump"
+            description="Warm assets on production servers" >
+            <property name="command" 
+                value="( 
+                cd ${deploy.path}/current/app &amp;&amp; 
+                ./console --no-ansi --env=${symfony.env} --symlink assets:install ../web &amp;&amp;
+                ./console --no-ansi --env=${symfony.env} assetic:dump  
+                )" 
+                override="true" />
+            <foreach list="${deploy.servers}" 
+                param="deploy.server" 
+                target="deploy.remotecmd" />
+    </target>
+
+    <!-- cache:clear -->
+    <!-- cache:warmup -->
+    <!-- fix cache permissions assumes that the webserver is in the same group as the owner -->
+    <target name="clear_cache"
+            description="dump and warm cache on production servers" >
+            <property name="command" 
+                value="(
+                cd ${deploy.path}/current/app &amp;&amp; 
+                ./console cache:clear --no-warmup &amp;&amp; 
+                ./console cache:warmup --no-ansi &amp;&amp; 
+                chmod -R 770 cache/
+                )" 
+                override="true" />
+            <foreach list="${deploy.servers}" 
+                     param="deploy.server" 
+                     target="deploy.remotecmd" />
+    </target>
+    
+    <!-- sync -->
+    <target name="sync_database" >
+        <property name="command" 
+            value="(
+            cd ${deploy.path}/current/app  &amp;&amp; 
+            ./console --no-ansi --force --em=admin --env=${symfony.env} edudirect:sync all 
+            )" 
+            override="true" />
+        <foreach list="${deploy.servers}" 
+            param="deploy.server" 
+            target="deploy.remotecmd" />
+    </target>
+    
+    <target name="sync" 
+        description="Syncs the database in production" 
+        depends="sync_database" />
+
+    <target name="sync.staging" 
+        description="Syncs the database in staging" 
+        depends="staging.properties,
+                 symfony.stage.properties,
+                 sync_database" />
+
+    <target name="sync.testing" 
+        description="Syncs the database in testing" 
+        depends="testing.properties,
+                 symfony.test.properties,
+                 sync_database" />
+    
+    <!-- restart memcached -->
+    <target name="restart_memcached"
+            depends="deploy.memcachedump"
+            description="Restarts the memcached on production" />
+
+    <target name="restart_memcached.staging"
+            depends="staging.properties, deploy.memcachedump"
+            description="Restarts the memcached on staging" />
+            
+    <!-- modification so test can be run -->
+    <target name="test"
+            description="Runs application unit tests">
+        <php expression="$_SERVER['KERNEL_DIR'] = '${project.basedir}/app'" />
+        <phingcall target="test.do" />
+    </target>
+
+    <!-- target shortcuts -->
+    <target name="staging"          depends="deploy.staging" />
+    <target name="production"       depends="deploy.production" />
+
+</project>
