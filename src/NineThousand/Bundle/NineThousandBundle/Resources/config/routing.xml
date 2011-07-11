@@ -7,4 +7,8 @@
     <route id="_homepage" pattern="/">
         <default key="_controller">NineThousandNineThousandBundle:Default:index</default>
     </route>
+    
+    <route id="_projects" pattern="/projects">
+        <default key="_controller">NineThousandNineThousandBundle:Projects:index</default>
+    </route>
 </routes>

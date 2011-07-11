@@ -21,11 +21,15 @@
 <body>
 
 <div id="topPanel">
+{% block menu %}
 {% include "NineThousandNineThousandBundle::menu.html.twig" %}
-	<a href="#"><img id="site-logo" src="bundles/ninethousandninethousand/images/logo.png" title="ninethousand.org" alt="ninethousand.org" /></a>
+{% endblock %}
+<a href="#"><img id="site-logo" src="bundles/ninethousandninethousand/images/logo.png" title="ninethousand.org" alt="ninethousand.org" /></a>
 </div>
 
+<div id="bodyPanel">
 {% block body %}{% endblock %}
+</div>
 
 <div id="footerPanel">
 {% include "NineThousandNineThousandBundle::footer.html.twig" %}

@@ -1,0 +1,27 @@
+ {% extends 'NineThousandNineThousandBundle::layout.html.twig' %}
+ {% block title "projects | ninethousand.org" %}
+ {% block menu %}{% include "NineThousandNineThousandBundle:Projects:menu.html.twig" %}{% endblock %}
+ {% block body %} 
+<div id="contentPanel">
+    <div id="projects" >
+    <h2>ninethousand.org projects</h2>
+    <ul>
+    {% for project in projects %}
+        <li>
+            <h3><a title="{{ project.title }}" href="/projects/{{ project.slug }}/" >{{ project.title }}</a></h3>
+            <div class="description">
+                {{ project.description }}
+            </div>
+            <div class="links">
+                <ul>
+                    <l1><a title="{{ project.title }} documentation" href="{{ project.documentation_url }}" ><h4>documentation</h4></a></li>
+                    <l1><a title="{{ project.title }} github repository" href="{{ project.github_url }}" ><h4>Github Repository</h4></a></li>
+                    <l1><a title="{{ project.title }} issues" href="{{ project.issues_url }}" ><h4>Issues</h4></a></li>
+                </ul>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+    </div>
+</div>
+ {% endblock %}
