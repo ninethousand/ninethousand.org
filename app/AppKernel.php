@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new NineThousand\JobqueueBundle\JobqueueBundle(),
             new CodeMeme\PhingistranoBundle\PhingistranoBundle(),
             new Knp\Bundle\ConsoleAutocompleteBundle\KnpConsoleAutocompleteBundle(),
+            new NineThousand\Bundle\NineThousandBundle\NineThousandNineThousandBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test', 'stage'))) {
