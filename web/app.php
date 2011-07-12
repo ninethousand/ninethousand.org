@@ -25,7 +25,7 @@ $env = (APPLICATION_ENV === 'staging'     ? 'stage'
      : (APPLICATION_ENV === 'testing'     ? 'test'
      : (APPLICATION_ENV === 'development' ? 'dev'
      : 'prod')));
-
-$kernel = new AppKernel($env, (($env == 'prod' || $env == 'stage') ? fase : true));
+ 
+$kernel = new AppKernel($env, (($env == 'prod' || $env == 'stage') ? false : true));
 $kernel->loadClassCache();
 $kernel->handle(Request::createFromGlobals())->send();
