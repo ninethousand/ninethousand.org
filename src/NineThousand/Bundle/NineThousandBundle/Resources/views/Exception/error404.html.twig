@@ -1,0 +1,7 @@
+ {% extends 'NineThousandNineThousandBundle::layout.html.twig' %}
+ {% block title "An Error Occurred: {{ status_text }} | ninethousand.org" %}
+ {% block menu %}{% include "NineThousandNineThousandBundle:Project:menu.html.twig" %}{% endblock %}
+ {% block body %} 
+        <h1>Oops! An Error Occurred</h1>
+        <h2>The server returned a "{{ exception.statuscode }} {{ exception.statustext }}".</h2>
+ {% endblock %}

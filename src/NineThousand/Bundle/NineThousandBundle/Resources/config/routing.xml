@@ -8,7 +8,13 @@
         <default key="_controller">NineThousandNineThousandBundle:Default:index</default>
     </route>
     
-    <route id="_projects" pattern="/projects">
+    <route id="_projects" pattern="/projects/">
         <default key="_controller">NineThousandNineThousandBundle:Projects:index</default>
+    </route>
+    <route id="_project_slug" pattern="/project/{slug}/">
+        <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
+    </route>
+    <route id="_project" pattern="/project//">
+        <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
     </route>
 </routes>

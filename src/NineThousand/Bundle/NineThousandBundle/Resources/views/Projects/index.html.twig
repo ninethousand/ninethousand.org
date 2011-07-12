@@ -8,13 +8,13 @@
     <ul>
     {% for project in projects %}
         <li>
-            <h3><a title="{{ project.title }}" href="/projects/{{ project.slug }}/" >{{ project.title }}</a></h3>
+            <h3><a title="{{ project.title }}" href="/project/{{ project.slug }}/" >{{ project.title }}</a></h3>
             <div class="description">
-                {{ project.description }}
+                <p class="capstext">{{ project.description }}<p>
             </div>
             <div class="links">
                 <ul>
-                    <l1><a title="{{ project.title }} documentation" href="{{ project.documentation_url }}" ><h4>documentation</h4></a></li>
+                    <l1><a title="{{ project.title }} documentation" href="{{ project.documentation_url }}" ><h4>Documentation</h4></a></li>
                     <l1><a title="{{ project.title }} github repository" href="{{ project.github_url }}" ><h4>Github Repository</h4></a></li>
                     <l1><a title="{{ project.title }} issues" href="{{ project.issues_url }}" ><h4>Issues</h4></a></li>
                 </ul>

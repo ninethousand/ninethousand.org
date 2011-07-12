@@ -18,6 +18,7 @@ ul {list-style-type:none}
 #topPanel ul li a {width:74px;height:36px;display:block;padding:0;color:#555;background:#fff;text-decoration:none;text-align:center;margin:0 1px 0 0;top:0;left:0}
 #topPanel ul li a:hover {width:74px;height:36px;text-decoration:none;background:url(../images/button.gif) no-repeat 0 0 #AEAEAE;color:#fff}
 #topPanel ul li.active {width:74px;display:block;height:36px;background:url(../images/button.gif) no-repeat 0 0 #AEAEAE;color:#fff;text-align:center;margin:0 1px 0 0}
+#topPanel ul li a.active {width:74px;height:36px;text-decoration:none;background:url(../images/button.gif) no-repeat 0 0 #AEAEAE;color:#fff}
 
 /* BODY PANEL*/
 #bodyPanel {width:800px;position:relative;margin:0 auto;padding:0}
@@ -58,14 +59,14 @@ ul {list-style-type:none}
 #contentPanel #technology {height:200px;display:inline-block; padding: 5px 15px 15px 30px;margin:0 0 20px 10px;position:relative; top: 0px;}
 #contentPanel #technology h3 {display:block;font:26px/26px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:0 0 0 20px;color:#FF7113}
 #contentPanel #technology ul {width:225px;display:block;}
-#contentPanel #technology ul li {font:12px/12px Arial,Helvetica,sans-serif;font-weight:normal;background:url(../images/symbol2.gif) 0 8px no-repeat;padding:0 0 0 30px}
+#contentPanel #technology ul li {font:20px/20px Arial,Helvetica,sans-serif;font-weight:normal;background:url(../images/symbol2.gif) 0 8px no-repeat;padding:0 0 0 30px}
 #contentPanel #technology ul span {background:url(../images/dot-line.gif) repeat-x 0 100%;height:25px;display:block}
 
 #contentPanel #projects h2 {display:block;font:26px/26px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:10px 0 10px 0;color:#FF7113;width:auto;}
-#contentPanel #projects {width:100%; padding: 5px 15px 15px 15px; margin:5 5 20px 5px;} 
+#contentPanel #projects {width:100%; padding: 5px 15px 15px 15px; margin:5px 5px 20px 5px;}
 #contentPanel #projects ul {width:100%;display:block;}
 #contentPanel #projects ul li {width:100%;display:block;display:block;font:16px/16px Georgia, "Times New Roman", Times, serif;font-weight:normal;background:url(../images/dot-line.gif);background-repeat:repeat-x; background-position:bottom; padding:20px 0 20px 0; }
-#contentPanel #projects div.description {width:48%; display:inline-block;}
+#contentPanel #projects div.description {width:48%; display:inline-block; vertical-align:top;padding: 5px 0 5px 0;}
 #contentPanel #projects div.links {width:48%; display:inline-block;}
 
 /* FOOTER PANEL*/
