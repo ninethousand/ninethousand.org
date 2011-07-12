@@ -9,9 +9,34 @@ a {padding:0 6px;color:#FF7113;text-decoration:none}
 a:hover {color:#666}
 div, ul, h1, h2, h3, li, p, img {margin:0;padding:0}
 ul {list-style-type:none}
+
+.ribbon {
+  background-color: #FF7113;
+  overflow: hidden;
+  position: absolute;
+  right: -3em;
+  top: 2.5em;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-box-shadow: 0 0 1em #888;
+  -webkit-box-shadow: 0 0 1em #888;
+}
+.ribbon a {
+  border: 1px solid #FFF;
+  color: #fff;
+  display: block;
+  font: bold 81.25% Georgia, "Times New Roman", Times, serif;
+  margin: 0.05em 0;
+  padding: 0.5em 3.5em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 0.5em #444;
+}
+
 /* TOP PANEL*/
 #topPanel {width:800px;height:130px;position:relative;margin:0 auto;padding:0}
 #topPanel #site-logo {width:350px;height:120px;z-index:1;padding:0;position:absolute; margin:0 0 0 25px}
+
 /* MENU PANEL*/
 #topPanel ul {display:block;width:800px;height:36px;position:absolute;top:50px;right:0;margin:11px 0 0;padding:0 29px 0 0;border-bottom:1px solid #AEAEAE}
 #topPanel ul li {float:right;font:12px/36px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold}

@@ -24,13 +24,13 @@ class NineThousandNineThousandExtension extends Extension
         $processor = new Processor();
         $configuration = new Configuration();
         $config = $processor->processConfiguration($configuration, $configs);
+        $this->loadProjects($container);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.xml');
-        $this->loadprojects($container);
+        $loader->load('ninethousand.xml');
     }
     
-    private function loadprojects(ContainerBuilder $container)
+    private function loadProjects(ContainerBuilder $container)
     {
         $data = Yaml::parse(__DIR__.'/../Resources/config/projects.yml');
         $container->setParameter('ninethousand.projects', $data['projects']);
