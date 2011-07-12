@@ -33,7 +33,7 @@
         description="Refreshes the vendors" >
         <exec dir="${project.basedir}/${build.target}/cached-copy"
             passthru="true"
-            command="rm -rf vendor/ &amp;&amp; bin/vendors install" />
+            command="bin/vendors install" />
     </target>
     
     <!-- suppliment config distributed-->
@@ -49,7 +49,7 @@
         <property name="command" 
                 value="(
                 cd ${deploy.path}/${build.target}/cached-copy &amp;&amp; 
-                rm -rf vendor/ &amp;&amp; bin/vendors install  
+                bin/vendors install  
                 )"
                 override="true" />
             <foreach  list="${deploy.servers}" 
