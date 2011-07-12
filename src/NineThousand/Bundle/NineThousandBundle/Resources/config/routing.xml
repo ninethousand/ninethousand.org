@@ -8,13 +8,25 @@
         <default key="_controller">NineThousandNineThousandBundle:Default:index</default>
     </route>
     
-    <route id="_projects" pattern="/projects/">
+    <route id="_projects_" pattern="/projects/">
         <default key="_controller">NineThousandNineThousandBundle:Projects:index</default>
     </route>
-    <route id="_project_slug" pattern="/project/{slug}/">
+    <route id="_project_slug_" pattern="/project/{slug}/">
         <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
     </route>
-    <route id="_project" pattern="/project//">
+    <route id="_project_" pattern="/project/">
         <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
+    </route>
+    <route id="_project_slug_support_" pattern="/project/{slug}/support/">
+        <default key="_controller">NineThousandNineThousandBundle:Projects:support</default>
+    </route>
+    <route id="_about_" pattern="/about/">
+        <default key="_controller">NineThousandNineThousandBundle:Default:about</default>
+    </route>
+    <route id="_support_" pattern="/support/">
+        <default key="_controller">NineThousandNineThousandBundle:Default:support</default>
+    </route>
+    <route id="_support_slug_" pattern="/support/{slug}/">
+        <default key="_controller">NineThousandNineThousandBundle:Projects:support</default>
     </route>
 </routes>

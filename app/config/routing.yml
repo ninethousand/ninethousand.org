@@ -5,3 +5,4 @@
 
 _home:
     resource: "@NineThousandNineThousandBundle/Resources/config/routing.xml"
+    prefix:   /
