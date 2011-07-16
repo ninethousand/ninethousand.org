@@ -69,6 +69,10 @@
     git=http://github.com/knplabs/zend-uri.git
     target=/zend/library/Zend/Uri
 
+[zend-dom]
+    git=http://github.com/knplabs/zend-dom.git
+    target=/zend/library/Zend/Dom6s
+
 [CodeMemeForm]
     git=http://github.com/CodeMeme/Form.git
     target=/CodeMeme/Form
@@ -101,4 +105,7 @@
 
 [ninethousand-jobqueue]
     git=http://github.com/ninethousand/ninethousand-jobqueue.git
+    
+[ninethousand-compredux]
+    git=http://github.com/ninethousand/ninethousand-compredux.git
 

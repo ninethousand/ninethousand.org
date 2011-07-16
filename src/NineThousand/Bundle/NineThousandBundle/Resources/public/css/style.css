@@ -48,6 +48,11 @@ ul {list-style-type:none}
 /* BODY PANEL*/
 #bodyPanel {width:800px;position:relative;margin:0 auto;padding:0}
 
+/* ERROR PANEL */
+#errorPanel {width:100%; margin: 10 auto;padding:10px; text-align:center}
+#errorPanel h1 {font:30px/30px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:5px;color:#FF7113}
+#errorPanel h2 {font:20px/20px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:5px;}
+
 /* FEATURE PANEL*/
 #featurePanel {width:800px;margin:0 auto;padding:0}
 #featurePanel #headerPanelfast {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/orange-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
