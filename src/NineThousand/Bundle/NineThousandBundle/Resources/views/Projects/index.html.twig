@@ -8,7 +8,7 @@
     <ul>
     {% for project in projects %}
         <li>
-            <h3><a title="{{ project.title }}" href="/project/{{ project.slug }}/" >{{ project.title }}</a></h3>
+            <h3><a title="{{ project.title }}" href="/project/{{ project.slug }}/{{ project.home_path }}" >{{ project.title }}</a></h3>
             <div class="description">
                 <p class="capstext">{{ project.description }}<p>
             </div>

@@ -16,16 +16,16 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             
             // External bundles
             new CodeMeme\DaemonBundle\DaemonBundle(),
-            new NineThousand\JobqueueBundle\JobqueueBundle(),
+            new NineThousand\Bundle\NineThousandJobqueueBundle\NineThousandJobqueueBundle(),
             new CodeMeme\PhingistranoBundle\PhingistranoBundle(),
             new Knp\Bundle\ConsoleAutocompleteBundle\KnpConsoleAutocompleteBundle(),
             new NineThousand\Bundle\NineThousandBundle\NineThousandNineThousandBundle(),
+            new NineThousand\Bundle\NineThousandCompreduxBundle\NineThousandCompreduxBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test', 'stage'))) {

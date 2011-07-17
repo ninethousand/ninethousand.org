@@ -19,17 +19,49 @@ class ProjectsController extends Controller
     
     public function projectAction($slug = null)
     { 
+        $slug = str_replace('-', '_', $slug);
         $projects = $this->container->getParameter('ninethousand.projects');
-        $id = null;
+        $found = false;
         foreach($projects as $key => $project) {
             if ($project['slug'] == $slug) {
-                $id = $key;
+                $found = true;
                 break;
             }
         }
-        if (!$slug || !$id) {
+        
+        if (!$found) {
             throw new NotFoundHttpException('Project page was not found.');
         }
+        
+        $client = $this->container->get('compredux.' . $slug);
+        $client->request();
+        $client->initHeaders();
+        if (!$client->isType('html')) {
+            echo $client->getContent();
+            exit();
+        }
+        
+        $projects[$key]['headscript'] = $client->getContent('head script');
+        $pattern = "/".addcslashes('GitHub.nameWithOwner || "','|')."/";
+        $replacement = 'GitHub.nameWithOwner || "' . $client->getController() ;
+        $projects[$key]['headscript'] = preg_replace($pattern , $replacement , $projects[$key]['headscript'] );
+        
+        $projects[$key]['bodyscript'] = $client->getContent('body script');
+        $projects[$key]['headlink'] = $client->getContent('head link');
+        $projects[$key]['content'] =  $client->getContent(
+            array(
+                '#slider',
+                '#guides',
+                '#toc', 
+                '#files', 
+                '#issues_next',
+            ), 
+            array(
+                '.big-actions',
+        ));
+        
+        
+
         return $this->render('NineThousandNineThousandBundle:Project:index.html.twig', 
                 array(
                     'project' => $projects[$key],

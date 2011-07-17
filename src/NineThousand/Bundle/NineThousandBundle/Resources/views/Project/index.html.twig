@@ -3,20 +3,21 @@
  {% block menu %}{% include "NineThousandNineThousandBundle:Project:menu.html.twig" %}{% endblock %}
  {% block body %} 
 <div id="contentPanel">
+    {% autoescape false %}{{ project.headlink }}{{ project.headscript }}{{ project.bodyscript }}{% endautoescape %}
+    <style>
+        #slider .frames .frame {
+            float: left;
+            margin-right: 100px;
+            width: 800px;
+        }
+    </style>
     <div id="project" >
     <h2>{{ project.title }}</h2>
             <div class="description">
                 <p class="capstext">{{ project.description }}<p>
             </div>
             <div class="readme">
-                {% include "NineThousandNineThousandBundle:Project:%this%.html.twig"|replace({'%this%': project.slug}) %}
-            </div>
-            <div class="links">
-                <ul>
-                    <l1><a title="{{ project.title }} documentation" href="{{ project.documentation_url }}" ><h4>Documentation</h4></a></li>
-                    <l1><a title="{{ project.title }} github repository" href="{{ project.github_url }}" ><h4>Github Repository</h4></a></li>
-                    <l1><a title="{{ project.title }} issues" href="{{ project.issues_url }}" ><h4>Issues</h4></a></li>
-                </ul>
+            {% autoescape false %} {{ project.content }} {% endautoescape %}
             </div>
     </div>
 </div>

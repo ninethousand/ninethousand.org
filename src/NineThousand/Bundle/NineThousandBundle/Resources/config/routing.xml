@@ -14,6 +14,9 @@
     <route id="_project_slug_" pattern="/project/{slug}/">
         <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
     </route>
+    <route id="_ninethousand_project_" pattern="/ninethousand/{slug}/">
+        <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
+    </route>
     <route id="_project_" pattern="/project/">
         <default key="_controller">NineThousandNineThousandBundle:Projects:project</default>
     </route>

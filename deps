@@ -45,10 +45,6 @@
     git=http://github.com/sensio/SensioFrameworkExtraBundle.git
     target=/bundles/Sensio/Bundle/FrameworkExtraBundle
 
-[JMSSecurityExtraBundle]
-    git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
-    target=/bundles/JMS/SecurityExtraBundle
-
 [SensioDistributionBundle]
     git=http://github.com/sensio/SensioDistributionBundle.git
     target=/bundles/Sensio/Bundle/DistributionBundle
@@ -71,7 +67,7 @@
 
 [zend-dom]
     git=http://github.com/knplabs/zend-dom.git
-    target=/zend/library/Zend/Dom6s
+    target=/zend/library/Zend/Dom
 
 [CodeMemeForm]
     git=http://github.com/CodeMeme/Form.git
@@ -98,10 +94,14 @@
 [DaemonBundle]
     git=http://github.com/CodeMeme/DaemonBundle.git
     target=/bundles/CodeMeme/DaemonBundle
+    
+[NineThousandCompreduxBundle]
+    git=http://github.com/ninethousand/NineThousandCompreduxBundle.git
+    target=/bundles/NineThousand/Bundle/NineThousandCompreduxBundle
 
-[JobqueueBundle]
-    git=http://github.com/ninethousand/JobqueueBundle.git
-    target=/bundles/NineThousand/JobqueueBundle
+[NineThousandJobqueueBundle]
+    git=http://github.com/ninethousand/NineThousandJobqueueBundle.git
+    target=/bundles/NineThousand/Bundle/NineThousandJobqueueBundle
 
 [ninethousand-jobqueue]
     git=http://github.com/ninethousand/ninethousand-jobqueue.git

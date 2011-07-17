@@ -44,9 +44,18 @@ swiftmailer:
     host:      %mailer_host%
     username:  %mailer_user%
     password:  %mailer_password%
-
-jms_security_extra:
-    secure_controllers:  true
-    secure_all_services: false
     
 nine_thousand_nine_thousand: ~
+
+nine_thousand_compredux: 
+    proxies:
+        jobqueue:
+            controller : project/jobqueue/
+            server : https://github.com
+        phingistrano:
+            controller : project/phingistrano/
+            server : https://github.com
+        compredux:
+            controller : project/compredux/
+            server : https://github.com
+

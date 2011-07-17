@@ -20,7 +20,7 @@ $loader->registerNamespaces(array(
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
-    'NineThousand'     => array(__DIR__.'/../vendor/ninethousand-jobqueue/lib', __DIR__.'/../vendor/bundles'),
+    'NineThousand'     => array(__DIR__.'/../vendor/ninethousand-jobqueue/lib', __DIR__.'/../vendor/ninethousand-compredux/lib',__DIR__.'/../vendor/bundles'),
 ));
 
 $loader->registerPrefixes(array(
