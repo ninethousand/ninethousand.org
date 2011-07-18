@@ -35,6 +35,9 @@ a.heading:hover {color:#666;text-decoration:none}
   text-decoration: none;
   text-shadow: 0 0 0.5em #444;
 }
+.ribbon a:hover {
+  text-decoration: none;
+}
 
 /* TOP PANEL*/
 #topPanel {width:800px;height:130px;position:relative;margin:0 auto;padding:0}
