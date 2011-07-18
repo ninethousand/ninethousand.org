@@ -20,7 +20,7 @@ function preload() {
     var tmp = null; 
     for (var j = 0; j < imgs.length; j++) { 
         tmp = imgs[j]; 
-        imgs[j] = new image(); 
+        imgs[j] = new Image(); 
         imgs[j].src = tmp; 
     } 
 } 
