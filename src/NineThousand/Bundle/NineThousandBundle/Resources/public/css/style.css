@@ -61,15 +61,15 @@ a.heading:hover {color:#666;text-decoration:none}
 #featurePanel #headerPanelfast {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/orange-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
 #featurePanel #headerPanelfast:hover {background:url(../images/orange-hover.png);cursor:pointer;}
 #featurePanel #headerPanelfast h2 {display:block;width:90px;height:47px;margin:40px 0 0 80px;font:16px/16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;z-index:1}
-#featurePanel #headerPanelfast p {width:140px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
+#featurePanel #headerPanelfast p {display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
 #featurePanel #headerPanelsecond {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/green-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
 #featurePanel #headerPanelsecond:hover {background:url(../images/green-hover.png);cursor:pointer;}
 #featurePanel #headerPanelsecond h2 {display:block;width:90px;height:47px;margin:40px 0 0 80px;font:16px/16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;z-index:1}
-#featurePanel #headerPanelsecond p {width:140px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
+#featurePanel #headerPanelsecond p {display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
 #featurePanel #headerPanelthird {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/blue-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
 #featurePanel #headerPanelthird:hover {background:url(../images/blue-hover.png);cursor:pointer;}
 #featurePanel #headerPanelthird h2 {display:block;width:90px;height:47px;margin:40px 0 0 80px;font:16px/16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;z-index:1}
-#featurePanel #headerPanelthird p {width:140px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
+#featurePanel #headerPanelthird p {display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
 
 /* CONTENT PANEL*/
 #contentPanel {width:800px;margin:0 auto;padding:0}
