@@ -10,6 +10,9 @@ a:hover {color:#666}
 div, ul, h1, h2, h3, li, p, img {margin:0;padding:0}
 ul {list-style-type:none}
 
+a.heading {color:#FF7113;text-decoration:none}
+a.heading:hover {color:#666;text-decoration:none}
+
 .ribbon {
   background-color: #FF7113;
   overflow: hidden;
@@ -57,20 +60,20 @@ ul {list-style-type:none}
 #featurePanel {width:800px;margin:0 auto;padding:0}
 #featurePanel #headerPanelfast {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/orange-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
 #featurePanel #headerPanelfast:hover {background:url(../images/orange-hover.png);cursor:pointer;}
-#featurePanel #headerPanelfast h2 {display:block;width:90px;height:47px;margin:54px 0 0 120px;font:18px/18px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;top:0;left:0;z-index:1}
-#featurePanel #headerPanelfast p {width:163px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:105px 50px 0 38px}
+#featurePanel #headerPanelfast h2 {display:block;width:90px;height:47px;margin:40px 0 0 80px;font:16px/16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;z-index:1}
+#featurePanel #headerPanelfast p {width:140px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
 #featurePanel #headerPanelsecond {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/green-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
 #featurePanel #headerPanelsecond:hover {background:url(../images/green-hover.png);cursor:pointer;}
-#featurePanel #headerPanelsecond h2 {display:block;width:90px;height:47px;background:none;margin:54px 0 0 103px;font:18px/18px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;padding:0;position:absolute;z-index:1}
-#featurePanel #headerPanelsecond p {width:163px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:105px 50px 0 38px}
+#featurePanel #headerPanelsecond h2 {display:block;width:90px;height:47px;margin:40px 0 0 80px;font:16px/16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;z-index:1}
+#featurePanel #headerPanelsecond p {width:140px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
 #featurePanel #headerPanelthird {display:inline-block;width:246px;height:263px;margin:0;padding:0;background:url(../images/blue-normal.png) no-repeat 0 0 #fff;color:#333;margin-left:5px; margin-right:5px;}
 #featurePanel #headerPanelthird:hover {background:url(../images/blue-hover.png);cursor:pointer;}
-#featurePanel #headerPanelthird h2 {display:block;width:90px;height:47px;background:none;margin:54px 0 0 93px;font:18px/18px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;padding:0;position:absolute;z-index:1}
-#featurePanel #headerPanelthird p {width:163px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:105px 50px 0 38px}
+#featurePanel #headerPanelthird h2 {display:block;width:90px;height:47px;margin:40px 0 0 80px;font:16px/16px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;z-index:1}
+#featurePanel #headerPanelthird p {width:140px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;z-index:1;padding:0;margin:115px 60px 0 38px}
 
 /* CONTENT PANEL*/
 #contentPanel {width:800px;margin:0 auto;padding:0}
-#contentPanel h2 {background:#fff;display:block;width:250px;height:50px;margin:0;font:30px/30px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:4px 0 0 0px;color:#FF7113}
+#contentPanel h2 {display:block;margin:0;font:30px/30px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:4px 0 0 0px;color:#FF7113}
 #contentPanel p.news {background:url(../images/symbol.png) 0 0 no-repeat #fff;margin:0 0 0 54px;padding:0 42px 35px 150px;color:#0F0F0F}
 #contentPanel p span {font-weight:bold}
 #contentPanel p.dotline {background:url(../images/dot-line.gif) 0 0 repeat-x #fff;padding:0;margin:0 40px 0 25px;color:#000}
@@ -81,7 +84,7 @@ ul {list-style-type:none}
 
 #contentPanel #support {width:260px;height:200px;display:inline-block;background:url(../images/testimonial-bg.gif) 0 0 no-repeat #FFF6DB;padding: 5px 15px 15px 148px;margin:0 0 20px 10px;color:#786321;position:relative; top: 0px;}
 #contentPanel #support h3 {display:block;font:26px/26px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:0 0 0 20px;color:#FF7113}
-#contentPanel #support p {background:none;margin:0;padding:0 0 5px 0}
+#contentPanel #support p {background:none;font:16px/16px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;margin:0;padding:0 0 5px 0}
 #contentPanel #support span.moretwo {height:26px;padding:0;background:none;margin:0; float:right;}
 #contentPanel #support span.moretwo a {width:76px;height:26px;display:inline-block;background:url(../images/more2.gif) 0 0 no-repeat #FFF5D6;color:#555;text-decoration:none;font:15px/26px "Trebuchet MS",Arial,Helvetica,sans-serif;text-transform:uppercase;padding:0 0 0 10px;top:0;right:0}
 #contentPanel #support span.moretwo a:hover {background:url(../images/more2.gif) 0 0 no-repeat #FFF5D6;color:#216EBD;text-decoration:none}
@@ -98,6 +101,19 @@ ul {list-style-type:none}
 #contentPanel #projects ul li {width:100%;display:block;display:block;font:16px/16px Georgia, "Times New Roman", Times, serif;font-weight:normal;background:url(../images/dot-line.gif);background-repeat:repeat-x; background-position:bottom; padding:20px 0 20px 0; }
 #contentPanel #projects div.description {width:48%; display:inline-block; vertical-align:top;padding: 5px 0 5px 0;}
 #contentPanel #projects div.links {width:48%; display:inline-block;}
+
+#contentPanel #about h2 {display:block;font:26px/26px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:10px 0 10px 0;color:#FF7113;width:auto;}
+#contentPanel #about {width:100%; padding: 5px; margin:5px; }
+#contentPanel #about p {font:16px/16px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;}
+#contentPanel #about ul li {width:100%;display:block;font:16px/16px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;background:url(../images/dot-line.gif);background-repeat:repeat-x; background-position:bottom; padding:20px 0 20px 0; }
+#contentPanel #about div.aboutmember {width:90%; vertical-align:top;padding: 5px 0 5px 0; margin:20px 0 15px 30px;}
+#contentPanel #about div.aboutmember img {float:left;margin:5px 10px 5px 10px;}
+
+#contentPanel #supportpage h2 {display:block;font:26px/26px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:10px 0 10px 0;color:#FF7113;width:auto;}
+#contentPanel #supportpage {width:100%; padding: 5px 15px 15px 15px; margin:5px 5px 20px 5px; }
+#contentPanel #supportpage p {font:16px/16px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;}
+#contentPanel #supportpage ul li {width:100%;display:block;font:16px/16px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;background:url(../images/dot-line.gif);background-repeat:repeat-x; background-position:bottom; padding:20px 0 20px 0; }
+
 
 /* FOOTER PANEL*/
 #footerPanel {color:#4C4C4C;font-size:12px; text-align:center;position:relative;margin:0 auto; padding: 10px;}

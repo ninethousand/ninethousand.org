@@ -20,4 +20,9 @@ class DefaultController extends Controller
                     'projects' => $this->container->getParameter('ninethousand.projects'),
                ));
     }
+    
+    public function aboutAction()
+    {
+        return $this->render('NineThousandNineThousandBundle:Default:about.html.twig', array());
+    }
 }

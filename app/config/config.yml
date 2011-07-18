@@ -58,4 +58,10 @@ nine_thousand_compredux:
         compredux:
             controller : project/compredux/
             server : https://github.com
+        compreduxbundle:
+            controller : project/compreduxbundle/
+            server : https://github.com
+        jobqueuebundle:
+            controller : project/jobqueuebundle/
+            server : https://github.com
 

@@ -1,24 +1,28 @@
  {% extends 'NineThousandNineThousandBundle::layout.html.twig' %}
- {% block title "projects | ninethousand.org" %}
+ {% block title %}{{ project.title }} | ninethousand.org{% endblock %}
  {% block menu %}{% include "NineThousandNineThousandBundle:Project:menu.html.twig" %}{% endblock %}
  {% block body %} 
 <div id="contentPanel">
-    {% autoescape false %}{{ project.headlink }}{{ project.headscript }}{{ project.bodyscript }}{% endautoescape %}
+    {% autoescape false %}{{ project.headlink }}{{ project.headscript }}{% endautoescape %}
     <style>
         #slider .frames .frame {
             float: left;
             margin-right: 100px;
             width: 800px;
         }
+        .columns.profilecols .last {
+            width: 300px;
+        }
     </style>
     <div id="project" >
-    <h2>{{ project.title }}</h2>
+    <h2><a title="{{ project.title }}" href="/project/{{ project.slug }}/{{ project.home_path }}" class="heading">{{ project.title }}</a></h2>
             <div class="description">
                 <p class="capstext">{{ project.description }}<p>
             </div>
-            <div class="readme">
+            <div class="compredux">
             {% autoescape false %} {{ project.content }} {% endautoescape %}
             </div>
     </div>
+    {% autoescape false %}{{ project.bodyscript }}{% endautoescape %}
 </div>
  {% endblock %}

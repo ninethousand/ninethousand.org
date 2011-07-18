@@ -45,7 +45,6 @@ class ProjectsController extends Controller
         $pattern = "/".addcslashes('GitHub.nameWithOwner || "','|')."/";
         $replacement = 'GitHub.nameWithOwner || "' . $client->getController() ;
         $projects[$key]['headscript'] = preg_replace($pattern , $replacement , $projects[$key]['headscript'] );
-        
         $projects[$key]['bodyscript'] = $client->getContent('body script');
         $projects[$key]['headlink'] = $client->getContent('head link');
         $projects[$key]['content'] =  $client->getContent(
@@ -53,7 +52,8 @@ class ProjectsController extends Controller
                 '#slider',
                 '#guides',
                 '#toc', 
-                '#files', 
+                '#file',
+                '.profilecols',
                 '#issues_next',
             ), 
             array(
