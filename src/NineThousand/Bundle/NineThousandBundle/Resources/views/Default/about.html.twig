@@ -1,0 +1,22 @@
+ {% extends 'NineThousandNineThousandBundle::layout.html.twig' %}
+ {% block title "About us | ninethousand.org" %}
+ {% block menu %}{% include "NineThousandNineThousandBundle:Default:about_menu.html.twig" %}{% endblock %}
+ {% block body %}
+   
+    <div id="contentPanel">
+        <div id="about">
+            <h2>About us</h2>
+            <p><strong>The ninethousand.org software project</strong> is an organization for producing high quality enterprise software and components. All of our software is licensed under open source licenses and can be used in any project which complies with its individual open source license. The Projects featured on ninethousand.org are expected to be in active development and not all have stable releases available, however we do use this website, github.com and PEAR to distribute our latest software builds and updates on a regular basis.</p>
+            <p> This site uses <a title="Symfony2" href="http://symfony.com/" >Symfony2</a>, <a title="Compredux" href="http://dev.ninethousand.org/project/compredux/ninethousand/ninethousand-compredux" >Compredux</a> and the <a title="Compredux Bundle" href="http://dev.ninethousand.org/project/compreduxbundle/ninethousand/NineThousandCompreduxBundle" >CompreduxBundle</a> to syndicate our code from the <a title="NineThousand Repository" href="https://github.com/organizations/ninethousand" >ninethousand repository</a> on github. We also use <a title="Doctrine" href="http://www.doctrine-project.org/projects" >Doctrine</a>, <a title="PEAR" href="http://pear.php.net/" >PEAR</a> and <a title="PHP" href="http://php.net/" >PHP 5.3</a> to render the website. We build the website using the <a title="Phingistrano" href="http://dev.ninethousand.org/project/phingistrano/CodeMeme/Phingistrano" >Phingistrano</a> utility, <a title="Phing" href="http://www.phing.info/trac/" >Phing</a> and <a title="github.com" href="http://github.com" >github</a>. 
+            </p>
+
+            <div class="aboutmember" >
+                <img class="avatar" alt="Jesse Greathouse" src="http://www.gravatar.com/avatar/d83a0e416f7edc265715465ae2b9e7ea?s=80" />
+                <h3><a title="Jesse Greathouse" href="http://dev.ninethousand.org/project/jobqueue/jessegreathouse" >Jesse Greathouse</a></h3>
+                <p>Jesse is the founder of the ninethousand project and the author of all 3 featured projects: Jobqueue, Phingistrano, and Compredux. Jesse has been programming PHP for over 10 years and is currently employed as a Software Architect for collegedegrees.com. In his spare time Jesse enjoys inventing new software components, playing video games, and cinema.</p>
+            </div>
+        </div>
+        
+    </div>
+
+ {% endblock %}
