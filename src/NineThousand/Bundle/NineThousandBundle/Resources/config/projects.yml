@@ -7,6 +7,7 @@ projects:
     documentation_url   : "/project/jobqueue/ninethousand/ninethousand-jobqueue/blob/master/README.md"
     github_url          : "https://github.com/ninethousand/ninethousand-jobqueue"
     issues_url          : "/project/jobqueue/ninethousand/ninethousand-jobqueue/issues"
+    demo                : "/jobqueue"
   - title               : "Phingistrano"
     slug                : "phingistrano"
     description         : "Building and deploying projects based on Phing."
@@ -35,4 +36,5 @@ projects:
     documentation_url   : "/project/jobqueuebundle/ninethousand/NineThousandJobqueueBundle/blob/master/README.md"
     github_url          : "https://github.com/ninethousand/ninethousand-compredux"
     issues_url          : "/project/jobqueuebundle/ninethousand/NineThousandJobqueueBundle/issues"
+    demo                : "/jobqueue"
 

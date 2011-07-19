@@ -6,3 +6,7 @@
 _home:
     resource: "@NineThousandNineThousandBundle/Resources/config/routing.xml"
     prefix:   /
+
+ninethousand_jobqueue:
+    resource: "@NineThousandJobqueueBundle/Resources/config/routing.xml"
+    prefix:   /jobqueue

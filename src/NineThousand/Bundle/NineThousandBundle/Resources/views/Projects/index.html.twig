@@ -14,9 +14,21 @@
             </div>
             <div class="links">
                 <ul>
-                    <l1><a title="{{ project.title }} documentation" href="{{ project.documentation_url }}" ><h4>Documentation</h4></a></li>
-                    <l1><a title="{{ project.title }} github repository" href="{{ project.github_url }}" ><h4>Github Repository</h4></a></li>
-                    <l1><a title="{{ project.title }} issues" href="{{ project.issues_url }}" ><h4>Issues</h4></a></li>
+                    {% if project.demo is defined %}
+                        <l1><a title="{{ project.title }} demo" href="{{ project.demo }}" ><h4>Demo</h4></a></li>
+                    {% endif %}
+                    
+                    {% if project.documentation_url is defined %}
+                        <l1><a title="{{ project.title }} documentation" href="{{ project.documentation_url }}" ><h4>Documentation</h4></a></li>
+                    {% endif %}
+                    
+                    {% if project.github_url is defined %}
+                        <l1><a title="{{ project.title }} github repository" href="{{ project.github_url }}" ><h4>Github Repository</h4></a></li>
+                    {% endif %}
+                    
+                    {% if project.issues_url is defined %}
+                        <l1><a title="{{ project.title }} issues" href="{{ project.issues_url }}" ><h4>Issues</h4></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </li>
