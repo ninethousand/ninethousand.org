@@ -4,6 +4,7 @@ namespace NineThousand\Bundle\NineThousandBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 
 class ProjectsController extends Controller
@@ -35,8 +36,16 @@ class ProjectsController extends Controller
         
         $client = $this->container->get('compredux.' . $slug);
         $client->request();
+        if ($client->hasErrors() && ($error = $client->getErrors())) {
+           if (false !== strpos($error, '404')) {
+               throw new NotFoundHttpException('Compredux request returned 404. Try refresh?');
+           } else {
+               throw new HttpException('Compredux request returned error');
+           }
+        }
         $client->initHeaders();
-        if (!$client->isType('html')) {
+
+        if (!$client->isType('html') && !$client->hasErrors()) {
             echo $client->getContent();
             exit();
         }
@@ -47,7 +56,7 @@ class ProjectsController extends Controller
         $projects[$key]['headscript'] = preg_replace($pattern , $replacement , $projects[$key]['headscript'] );
         $projects[$key]['bodyscript'] = $client->getContent('body script');
         $projects[$key]['headlink'] = $client->getContent('head link');
-        $projects[$key]['content'] =  $client->getContent(
+        $projects[$key]['content'] =  trim($client->getContent(
             array(
                 '#slider',
                 '#guides',
@@ -58,9 +67,11 @@ class ProjectsController extends Controller
             ), 
             array(
                 '.big-actions',
-        ));
-        
-        
+        )));
+
+        if (empty($projects[$key]['content'])) {
+               throw new NotFoundHttpException('Compredux was successful but no content was collected.');
+        }
 
         return $this->render('NineThousandNineThousandBundle:Project:index.html.twig', 
                 array(
