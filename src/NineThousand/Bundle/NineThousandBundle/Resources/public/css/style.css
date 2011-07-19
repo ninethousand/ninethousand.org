@@ -87,7 +87,7 @@ a.heading:hover {color:#666;text-decoration:none}
 
 #contentPanel #support {width:260px;height:200px;display:inline-block;background:url(../images/testimonial-bg.gif) 0 0 no-repeat #FFF6DB;padding: 5px 15px 15px 148px;margin:0 0 20px 10px;color:#786321;position:relative; top: 0px;}
 #contentPanel #support h3 {display:block;font:26px/26px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:0 0 0 20px;color:#FF7113}
-#contentPanel #support p {background:none;font:16px/16px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;margin:0;padding:0 0 5px 0}
+#contentPanel #support p {background:none;font:14px/14px "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;line-height:20px;font-weight:normal;color:#555;margin:0;padding:0 0 5px 0}
 #contentPanel #support span.moretwo {height:26px;padding:0;background:none;margin:0; float:right;}
 #contentPanel #support span.moretwo a {width:76px;height:26px;display:inline-block;background:url(../images/more2.gif) 0 0 no-repeat #FFF5D6;color:#555;text-decoration:none;font:15px/26px "Trebuchet MS",Arial,Helvetica,sans-serif;text-transform:uppercase;padding:0 0 0 10px;top:0;right:0}
 #contentPanel #support span.moretwo a:hover {background:url(../images/more2.gif) 0 0 no-repeat #FFF5D6;color:#216EBD;text-decoration:none}
