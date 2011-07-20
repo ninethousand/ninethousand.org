@@ -20,7 +20,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             
             // External bundles
-            new CodeMeme\DaemonBundle\DaemonBundle(),
+            new CodeMeme\Bundle\CodeMemeDaemonBundle\CodeMemeDaemonBundle(),
             new NineThousand\Bundle\NineThousandJobqueueBundle\NineThousandJobqueueBundle(),
             new CodeMeme\PhingistranoBundle\PhingistranoBundle(),
             new Knp\Bundle\ConsoleAutocompleteBundle\KnpConsoleAutocompleteBundle(),

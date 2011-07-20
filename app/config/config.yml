@@ -65,3 +65,8 @@ nine_thousand_compredux:
             controller : project/jobqueuebundle/
             server : https://github.com
 
+#Example Daemon Configuration
+code_meme_daemon:
+    daemons:
+        jobqueue: ~
+

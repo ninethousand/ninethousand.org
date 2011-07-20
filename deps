@@ -91,9 +91,9 @@
     git=http://github.com/symfony/DoctrineFixturesBundle.git
     target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
 
-[DaemonBundle]
-    git=http://github.com/CodeMeme/DaemonBundle.git
-    target=/bundles/CodeMeme/DaemonBundle
+[CodeMemeDaemonBundle]
+    git=http://github.com/CodeMeme/CodeMemeDaemonBundle.git
+    target=/bundles/CodeMeme/Bundle/CodeMemeDaemonBundle
     
 [NineThousandCompreduxBundle]
     git=http://github.com/ninethousand/NineThousandCompreduxBundle.git
