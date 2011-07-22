@@ -37,4 +37,10 @@ projects:
     github_url          : "https://github.com/ninethousand/ninethousand-compredux"
     issues_url          : "/project/jobqueuebundle/ninethousand/NineThousandJobqueueBundle/issues"
     demo                : "/jobqueue"
-
+  - title               : "Daemon Bundle"
+    slug                : "daemonbundle"
+    home_path           : "CodeMeme/CodeMemeDaemonBundle"
+    description         : "Runs Symfony2 console commands as system daemon. Wrapper for System_Daemon PEAR library."
+    documentation_url   : "/project/jobqueuebundle/CodeMeme/CodeMemeDaemonBundle/blob/master/README.md"
+    github_url          : "https://github.com/CodeMeme/CodeMemeDaemonBundle"
+    issues_url          : "/project/jobqueuebundle/CodeMeme/CodeMemeDaemonBundle/issues"
