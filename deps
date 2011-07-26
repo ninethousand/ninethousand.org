@@ -3,7 +3,7 @@
 
 [twig]
     git=http://github.com/fabpot/Twig.git
-    version=v1.1.0
+    version=v1.1.1
 
 [monolog]
     git=http://github.com/Seldaek/monolog.git
@@ -34,16 +34,22 @@
 
 [assetic]
     git=http://github.com/kriswallsmith/assetic.git
+    version=v1.0.1
 
 [twig-extensions]
     git=http://github.com/fabpot/Twig-extensions.git
 
 [metadata]
     git=http://github.com/schmittjoh/metadata.git
+    version=1.0.0
 
 [SensioFrameworkExtraBundle]
     git=http://github.com/sensio/SensioFrameworkExtraBundle.git
     target=/bundles/Sensio/Bundle/FrameworkExtraBundle
+
+[JMSSecurityExtraBundle]
+    git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
+    target=/bundles/JMS/SecurityExtraBundle
 
 [SensioDistributionBundle]
     git=http://github.com/sensio/SensioDistributionBundle.git
@@ -56,6 +62,7 @@
 [AsseticBundle]
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
+    version=v1.0.0RC1
 
 [zend-http]
     git=http://github.com/knplabs/zend-http.git
