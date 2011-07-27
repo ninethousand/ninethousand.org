@@ -71,8 +71,7 @@ nine_thousand_compredux:
 #Example Daemon Configuration
 code_meme_daemon:
     daemons:
-        jobqueue:
-            appUser: daemon
+        jobqueue: ~
 
 
 
