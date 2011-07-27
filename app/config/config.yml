@@ -71,8 +71,8 @@ nine_thousand_compredux:
 #Example Daemon Configuration
 code_meme_daemon:
     daemons:
-        jobqueue: 
-            appRunAsGID: 33
-            appRunAsUID: 33
+        jobqueue:
+            appUser: daemon
+
 
 
