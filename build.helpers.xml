@@ -95,8 +95,8 @@
             <property name="command" 
                 value="(
                 cd ${deploy.path}/current/app &amp;&amp; 
-                ./console cache:clear --no-warmup &amp;&amp; 
-                ./console cache:warmup --no-ansi &amp;&amp; 
+                ./console cache:clear --env=${symfony.env} --no-warmup &amp;&amp; 
+                ./console cache:warmup --env=${symfony.env} --no-ansi &amp;&amp; 
                 chmod -R 770 cache/
                 )" 
                 override="true" />
