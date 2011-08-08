@@ -77,10 +77,6 @@
     git=http://github.com/knplabs/zend-dom.git
     target=/zend/library/Zend/Dom
 
-[CodeMemeForm]
-    git=http://github.com/CodeMeme/Form.git
-    target=/CodeMeme/Form
-
 [Phingistrano]
     git=http://github.com/CodeMeme/Phingistrano.git
 
