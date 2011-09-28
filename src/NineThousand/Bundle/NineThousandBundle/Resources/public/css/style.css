@@ -10,8 +10,8 @@ a:hover {color:#666}
 div, ul, h1, h2, h3, li, p, img {margin:0;padding:0}
 ul {list-style-type:none}
 
-a.heading {color:#FF7113;text-decoration:none}
-a.heading:hover {color:#666;text-decoration:none}
+a.heading, #project h1 a {color:#FF7113;text-decoration:none}
+a.heading:hover, #project h1 a:hover {color:#666;text-decoration:none}
 
 .ribbon {
   background-color: #FF7113;

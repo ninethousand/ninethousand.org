@@ -49,6 +49,15 @@ class ProjectsController extends Controller
             echo $client->getContent();
             exit();
         }
+        $projects[$key]['header'] = $projects[$key]['title'];
+        if (null != ($title = $client->getContent('.title-actions-bar h1'))) {
+            $projects[$key]['title'] = trim(str_replace('/', '|', strip_tags($title)));
+            $projects[$key]['header'] = trim($title);
+        }
+
+        if (null != ($description = $client->getContent(array('#repository_description > p'), array('span','a')))) {
+            $projects[$key]['description'] = trim($description);
+        }
         
         $projects[$key]['headscript'] = $client->getContent('head script');
         $pattern = "/".addcslashes('GitHub.nameWithOwner || "','|')."/";
