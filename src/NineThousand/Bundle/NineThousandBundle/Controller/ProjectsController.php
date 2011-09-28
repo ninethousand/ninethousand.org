@@ -50,9 +50,12 @@ class ProjectsController extends Controller
             exit();
         }
         $projects[$key]['header'] = $projects[$key]['title'];
-        if (null != ($title = $client->getContent('.title-actions-bar h1'))) {
-            $projects[$key]['title'] = trim(str_replace('/', '|', strip_tags($title)));
-            $projects[$key]['header'] = trim($title);
+        if (($title = trim($client->getContent('.title-actions-bar h1')))!="") {
+            $projects[$key]['title'] = str_replace('/', '|', strip_tags($title));
+            $projects[$key]['header'] = $title;
+        } else if (($title = trim($client->getContent('div.userpage h1')))!="") {
+            $projects[$key]['title'] = strip_tags($title);
+            $projects[$key]['header'] = "";
         }
 
         if (null != ($description = $client->getContent(array('#repository_description > p'), array('span','a')))) {
