@@ -17,8 +17,40 @@ class ProjectsController extends Controller
                     'projects' => $this->container->getParameter('ninethousand.projects'),
                 ));
     }
-    
+
     public function projectAction($slug = null)
+    { 
+
+        if (isset($_SERVER['HTTP_USER_AGENT'])) {
+            if (false !== (strrpos($_SERVER['HTTP_USER_AGENT'], 'Google'))) {
+                return $this->depreciatedprojectAction($slug);
+            }
+        }
+        $slug = str_replace('-', '_', $slug);
+        $projects = $this->container->getParameter('ninethousand.projects');
+        $found = false;
+        foreach($projects as $key => $project) {
+            if ($project['slug'] == $slug) {
+                $found = true;
+                break;
+            }
+        }
+        
+        if (!$found) {
+            throw new NotFoundHttpException('Project page was not found.');
+        }
+        
+        $client = $this->container->get('compredux.' . $slug);
+        $options = $client->getOptions();
+
+        return $this->render('NineThousandNineThousandBundle:Project:index.html.twig', 
+                array(
+                    'title'    => $projects[$key]['title'],
+                    'location' => $options['curl_options']['CURLOPT_URL'],
+                ));
+    }
+    
+    public function depreciatedprojectAction($slug = null)
     { 
         $slug = str_replace('-', '_', $slug);
         $projects = $this->container->getParameter('ninethousand.projects');
@@ -85,7 +117,7 @@ class ProjectsController extends Controller
                throw new NotFoundHttpException('Compredux was successful but no content was collected.');
         }
 
-        return $this->render('NineThousandNineThousandBundle:Project:index.html.twig', 
+        return $this->render('NineThousandNineThousandBundle:Project:depreciatedindex.html.twig', 
                 array(
                     'project' => $projects[$key],
                 ));
